@@ -1,0 +1,19 @@
+<h1>CIASTO</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @games.each do |game| %>
+     <tr>
+       <%= game.id %>
+       <% game.matches.each do |match| %>
+       <tr>
+	 <td><%= match.t1_goals %></td>
+	 <td><%= match.t2_goals %></td>
+       </tr>
+       <% end %>
+    </tr>
+  <% end %>
+</table>
